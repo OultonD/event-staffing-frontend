@@ -24,7 +24,7 @@ export default function StaffForm() {
     setSuccess(null);
 
     try {
-      const res = await fetch("/api/staff", {
+      const res = await fetch("https://event-staffing-backend.onrender.com//api/staff", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
