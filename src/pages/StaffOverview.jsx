@@ -14,13 +14,13 @@ export default function StaffOverview() {
   }, []);
 
   const fetchStaff = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/staff`);
+    const res = await fetch("https://event-staffing-backend.onrender.com/api/staff");
     const data = await res.json();
     setStaff(data);
   };
 
   const fetchEvents = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/events`);
+    const res = await fetch("https://event-staffing-backend.onrender.com/api/events");
     const data = await res.json();
     setEvents(data);
   };
