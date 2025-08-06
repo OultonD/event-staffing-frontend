@@ -48,55 +48,61 @@ export default function StaffForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: "auto" }}>
-      <h2>Create Staff Profile</h2>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full space-y-4"
+      >
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Create Staff Profile</h2>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
+        {error && <p className="text-red-500">{error}</p>}
+        {success && <p className="text-green-500">{success}</p>}
 
-      <label>
-        Name:
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Name</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-300"
+          />
+        </div>
 
-      <br />
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-300"
+          />
+        </div>
 
-      <label>
-        Email:
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </label>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Role</label>
+          <input
+            type="text"
+            name="role"
+            value={formData.role}
+            onChange={handleChange}
+            required
+            className="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-300"
+          />
+        </div>
 
-      <br />
-
-      <label>
-        Role:
-        <input
-          type="text"
-          name="role"
-          value={formData.role}
-          onChange={handleChange}
-          required
-        />
-      </label>
-
-      <br />
-
-      <button type="submit" disabled={loading}>
-        {loading ? "Saving..." : "Create Profile"}
-      </button>
-    </form>
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+        >
+          {loading ? "Saving..." : "Create Profile"}
+        </button>
+      </form>
+    </div>
   );
 }
 
