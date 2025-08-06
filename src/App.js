@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import StaffPage from "./pages/StaffPage";
 
 function App() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("https://your-backend-url/api/events")
+    fetch(process.env.REACT_APP_BACKEND_URL)
       .then(res => res.json())
       .then(data => setEvents(data))
       .catch(console.error);
