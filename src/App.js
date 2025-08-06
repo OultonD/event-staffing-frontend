@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage.jsx';
 import StaffPage from './pages/StaffPage.jsx';
 import Layout from "./components/Layout.jsx";
-import StaffOverview from "./pages/StaffOverview";
+import StaffOverview from "./pages/StaffOverview.jsx";
 
 function App() {
   return (
