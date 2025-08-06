@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage.jsx';
 import StaffPage from './pages/StaffPage.jsx';
-import Layout from "./components/Layout";
+import Layout from "./components/Layout.jsx";
 
 
 function App() {
